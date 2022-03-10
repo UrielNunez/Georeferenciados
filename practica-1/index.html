@@ -13,6 +13,7 @@
     <style>
       #mapa{
         width: 600px;
+        height: 350px;
       }
     </style>
 
@@ -181,7 +182,9 @@
     
 
     <!---->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMrQgga-C5zCuZLTVk2MPVzX7naqKZXZU&callback=iniciaMapa" async defer></script>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRO9NdcRw6TMcOGYPfl7byXEGVQoDmSoI&callback=initMap">
+</script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>   
 
@@ -197,7 +200,7 @@
 
     <script>
 
-      function iniciaMapa(){
+      function initMap(){
         var coordenadas = {
           lat: 21.152854975645525,
           lng: -101.71073064407186,
