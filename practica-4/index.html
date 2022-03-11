@@ -15,11 +15,15 @@
     </div>
 
 
+    <p id="alerta"></p>
     <script>
         var mapa = document.getElementById("mapa");
         function obtieneUbicacion(){
             if(navigator.geolocation){
                 navigator.geolocation.getCurrentPosition(muestraPosicion);
+            }else{
+                var alerta = document.getElementById("alerta");
+                alerta.innerHTML = "El navegador no dispone de geolocalizacion";
             }
         }
         function muestraPosicion(position){
@@ -29,8 +33,6 @@
 
             imagenmapa.src = "https://maps.googleapis.com/maps/staticmap?center=" + coordenadas + "&zoom=18&size=800x800&key=AIzaSyCMrQgga-C5zCuZLTVk2MPVzX7naqKZXZU "
         }
-
-
     </script>
 </body>
 </html>
