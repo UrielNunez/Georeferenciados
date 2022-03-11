@@ -7,24 +7,29 @@
     <title>Practica 3</title>
 </head>
 <body>
-    <p>Hax click en el bototn para obetener las coordenadas</p>
-    <button onclick="getLocation()">Obtener coordenadas</button>
-    <p id="mapa"></p>
+    
+    <button onclick="obtieneUbicacion()">Obtener Ubicació</button>
+
+    <div id="mapa">
+        <img id="imagenmapa" src="" alt="imagen de mapa">
+    </div>
+
 
     <script>
         var mapa = document.getElementById("mapa");
-
-        function getLocation(){
+        function obtieneUbicacion(){
             if(navigator.geolocation){
                 navigator.geolocation.getCurrentPosition(muestraPosicion);
             }
         }
-
         function muestraPosicion(position){
-            console.log(position);
-            mapa.innerHTML = "Latitud: " + position.coords.latitude + "<br>" + "Longitud" + position.coords.longitude; 
+            var coordenadas = position.coords.latitude +  "," + position.coords.longitude;
 
+            var imagenmapa = document.getElementById("imagenmapa");
+
+            imagenmapa.src = "https://maps.googleapis.com/maps/staticmap?center=" + coordenadas + "&zoom=18&size=800x800&key=AIzaSyCMrQgga-C5zCuZLTVk2MPVzX7naqKZXZU "
         }
+
 
     </script>
 </body>
