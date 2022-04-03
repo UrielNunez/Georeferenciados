@@ -52,15 +52,17 @@
                     console.log(marcador);
 
                     var informacion = "<strong>País:</strong> "+ marcador.CountryName;
+                    var informacion2 = "<strong>Capital:</strong> "+ marcador.CapitalName;
 
                     var infowindow = new google.maps.InfoWindow({
-                        content: informacion
+                        content: informacion, informacion2
                     });
 
                     let marker = new google.maps.Marker({
                         map: map,
                         position: new google.maps.LatLng(marcador.CapitalLatitude, marcador.CapitalLongitude),
-                        title: marcador.CountryName  
+                        title: marcador.CountryName,  
+                        subtitle: marcador.CapitalName
                     });
 
                     marker.addListener('click', function() {
@@ -68,7 +70,7 @@
                     });
 
                     
-                    fetch('paises.json')
+                    /*fetch('paises.json')
                     .then(function(respuesta) {
 
                         respuesta.json().then(function(datospaises) {
@@ -101,7 +103,7 @@
 
                         });
 
-                    });
+                    });*/
 
 
                     
