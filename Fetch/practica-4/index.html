@@ -48,29 +48,29 @@
                 console.log(datos);
 
                 datos.forEach( marcador => {
+                    /*
 
                     console.log(marcador);
 
                     var informacion = "<strong>País:</strong> "+ marcador.CountryName;
-                    var informacion2 = "<strong>Capital:</strong> "+ marcador.CapitalName;
 
                     var infowindow = new google.maps.InfoWindow({
-                        content: informacion, informacion2
+                        content: informacion
                     });
 
                     let marker = new google.maps.Marker({
                         map: map,
                         position: new google.maps.LatLng(marcador.CapitalLatitude, marcador.CapitalLongitude),
-                        title: marcador.CountryName,  
-                        subtitle: marcador.CapitalName
+                        title: marcador.CountryName
                     });
 
                     marker.addListener('click', function() {
                         infowindow.open(map, marker);
                     });
+                    */
 
                     
-                    /*fetch('paises.json')
+                    fetch('paises.json')
                     .then(function(respuesta) {
 
                         respuesta.json().then(function(datospaises) {
@@ -103,7 +103,7 @@
 
                         });
 
-                    });*/
+                    });
 
 
                     
